@@ -1,0 +1,23 @@
+{
+    "name": "tomohiro/gimei",
+    "type": "library",
+    "description": "Random Japanese name generator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tomohiro Taira",
+            "email": "tomohiro.t@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "~5.6|~7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.8 || ~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gimei\\": "src"
+        }
+    }
+}
