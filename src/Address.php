@@ -2,6 +2,10 @@
 
 namespace Gimei;
 
+use Gimei\Address\Prefecture;
+use Gimei\Address\City;
+use Gimei\Address\Town;
+
 class Address extends Base
 {
     public $prefecture;
@@ -29,18 +33,18 @@ class Address extends Base
     protected function samplePrefecture($prefectures)
     {
         $prefecture = $this->sample($prefectures);
-        return new Name($prefecture[0], $prefecture[1], $prefecture[2]);
+        return new Prefecture($prefecture[0], $prefecture[1], $prefecture[2]);
     }
 
     protected function sampleCity($cities)
     {
         $city = $this->sample($cities);
-        return new Name($city[0], $city[1], $city[2]);
+        return new City($city[0], $city[1], $city[2]);
     }
 
     protected function sampleTown($towns)
     {
         $town = $this->sample($towns);
-        return new Name($town[0], $town[1], $town[2]);
+        return new Town($town[0], $town[1], $town[2]);
     }
 }

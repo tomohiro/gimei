@@ -19,20 +19,20 @@ Requirements
 Usage
 --------------------------------------------------------------------------------
 
+### Generate a name
+
 ```php
 <?php
-$person = Gimei::person();
-$person->kanji;    // 野村 敏彦
-$person->hiragana; // のむら としひこ
-$person->katakana; // ノムラ トシヒコ
-
-$person->firstName->kanji;    // 野村
-$person->firstName->hiragana; // のむら
-$person->firstName->katakana; // ノムラ
-
-$person->lastName->kanji;    // 敏彦
-$person->lastName->hiragana; // としひこ
-$person->lastName->katakana; // トシヒコ
+$name= Gimei::name();
+$name->kanji;               // 野村 敏彦
+$name->hiragana;            // のむら としひこ
+$name->katakana;            // ノムラ トシヒコ
+$name->firstName->kanji;    // 野村
+$name->firstName->hiragana; // のむら
+$name->firstName->katakana; // ノムラ
+$name->lastName->kanji;     // 敏彦
+$name->lastName->hiragana;  // としひこ
+$name->lastName->katakana;  // トシヒコ
 ```
 
 

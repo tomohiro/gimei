@@ -4,9 +4,19 @@ namespace Gimei;
 
 class Gimei
 {
-    public static function name(string $gender = null)
+    public static function name()
     {
-        return new Name($gender);
+        return new Name();
+    }
+
+    public static function male()
+    {
+        return new Name('male');
+    }
+
+    public static function female()
+    {
+        return new Name('female');
     }
 
     public static function address()
