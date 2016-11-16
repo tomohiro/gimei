@@ -19,6 +19,12 @@ class GimeiTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($maleName->gender->isMale());
     }
 
+    public function testGenerateFemaleName()
+    {
+        $femaleName = Gimei::female();
+        $this->assertInstanceOf('Gimei\Name', $femaleName);
+        $this->assertTrue($femaleName->gender->isFemale());
+    }
 
     public function testGenerateAddress()
     {
