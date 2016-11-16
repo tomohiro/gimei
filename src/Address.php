@@ -15,7 +15,7 @@ class Address extends Base
     public $hiragana;
     public $katakana;
 
-    public function __construct(string $gender = null)
+    public function __construct($gender = null)
     {
         $addresses  = Dictionary::create()->addresses;
         $prefecture = $this->samplePrefecture($addresses->prefecture);

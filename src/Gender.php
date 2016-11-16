@@ -9,7 +9,7 @@ class Gender
 
     protected $gender = null;
 
-    public function __construct(string $gender = null)
+    public function __construct($gender = null)
     {
         $genders = [self::MALE, self::FEMALE];
         $this->gender = $gender ?: $genders[array_rand($genders)];

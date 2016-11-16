@@ -15,7 +15,7 @@ class Name extends Base
     private $gender;
     private $people;
 
-    public function __construct(string $gender = null)
+    public function __construct($gender = null)
     {
         $people    = Dictionary::create()->people;
         $gender    = new Gender($gender);
