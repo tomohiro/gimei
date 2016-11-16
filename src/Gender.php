@@ -8,11 +8,11 @@ class Gender
     const FEMALE = 'female';
 
     protected $gender = null;
-    private $genders = [MALE, FEMALE];
 
     public function __construct(string $gender = null)
     {
-        $this->gender = $gender ?: $this->genders[array_rand($this->genders)];
+        $genders = [self::MALE, self::FEMALE];
+        $this->gender = $gender ?: $genders[array_rand($genders)];
     }
 
     public static function random()

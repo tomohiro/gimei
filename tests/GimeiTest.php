@@ -11,4 +11,10 @@ class GimeiTest extends \PHPUnit_Framework_TestCase
         $person = Gimei::person();
         $this->assertInstanceOf('Gimei\Person', $person);
     }
+
+    public function testGenerateAddress()
+    {
+        $address = Gimei::address();
+        $this->assertInstanceOf('Gimei\Address', $address);
+    }
 }

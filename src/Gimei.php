@@ -8,4 +8,9 @@ class Gimei
     {
         return new Person($gender);
     }
+
+    public static function address()
+    {
+        return new Address;
+    }
 }
