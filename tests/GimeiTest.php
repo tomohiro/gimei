@@ -6,10 +6,10 @@ use Gimei\Gimei;
 
 class GimeiTest extends \PHPUnit_Framework_TestCase
 {
-    public function testGeneratePerson()
+    public function testGenerateName()
     {
-        $person = Gimei::person();
-        $this->assertInstanceOf('Gimei\Person', $person);
+        $name = Gimei::name();
+        $this->assertInstanceOf('Gimei\Name', $name);
     }
 
     public function testGenerateAddress()
