@@ -4,35 +4,37 @@ namespace Gimei;
 
 class Person extends Base
 {
-    public $firstName = null;
-    public $lastName  = null;
-    public $kanji     = null;
-    public $hiragana  = null;
-    public $katakana  = null;
-    private $gender = null;
-    private $people = null;
+    public $firstName;
+    public $lastName;
+    public $kanji;
+    public $hiragana;
+    public $katakana;
+    private $gender;
+    private $people;
 
     public function __construct(string $gender = null)
     {
-        $this->people    = Dictionary::create()->people;
-        $this->gender    = new Gender($gender);
-        $this->firstName = $this->sampleFirstName();
-        $this->lastName  = $this->sampleLastName();
-        $this->kanji     = "{$this->lastName->kanji} {$this->firstName->kanji}";
-        $this->hiragana  = "{$this->lastName->hiragana} {$this->firstName->hiragana}";
-        $this->katakana  = "{$this->lastName->katakana} {$this->firstName->katakana}";
+        $people    = Dictionary::create()->people;
+        $gender    = new Gender($gender);
+        $firstName = $this->sampleFirstName($people->first_name->{$gender});
+        $lastName  = $this->sampleLastName($people->last_name);
+
+        $this->firstName = $firstName;
+        $this->lastName  = $lastName;
+        $this->kanji     = "{$lastName->kanji} {$firstName->kanji}";
+        $this->hiragana  = "{$lastName->hiragana} {$firstName->hiragana}";
+        $this->katakana  = "{$lastName->katakana} {$firstName->katakana}";
     }
 
-    protected function sampleFirstName()
+    protected function sampleFirstName($firstNames)
     {
-        $gender = strtolower((string) $this->gender);
-        $names = $this->sample($this->people->first_name->{$gender});
-        return new Name($names[0], $names[1], $names[2]);
+        $firstName = $this->sample($firstNames);
+        return new Name($firstName[0], $firstName[1], $firstName[2]);
     }
 
-    protected function sampleLastName()
+    protected function sampleLastName($lastNames)
     {
-        $names = $this->sample($this->people->last_name);
-        return new Name($names[0], $names[1], $names[2]);
+        $lastName = $this->sample($lastNames);
+        return new Name($lastName[0], $lastName[1], $lastName[2]);
     }
 }
