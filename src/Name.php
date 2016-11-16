@@ -12,7 +12,7 @@ class Name extends Base
     public $kanji;
     public $hiragana;
     public $katakana;
-    public $gender;
+    private $gender;
     private $people;
 
     public function __construct(string $gender = null)
@@ -28,6 +28,16 @@ class Name extends Base
         $this->kanji     = "{$lastName->kanji} {$firstName->kanji}";
         $this->hiragana  = "{$lastName->hiragana} {$firstName->hiragana}";
         $this->katakana  = "{$lastName->katakana} {$firstName->katakana}";
+    }
+
+    public function isMale()
+    {
+        return $this->gender->isMale();
+    }
+
+    public function isFemale()
+    {
+        return $this->gender->isFemale();
     }
 
     protected function sampleFirstName($firstNames)

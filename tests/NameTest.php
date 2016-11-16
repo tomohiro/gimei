@@ -16,6 +16,9 @@ class NameTest extends \PHPUnit_Framework_TestCase
         $male = new Name('male');
 
         $this->assertInstanceOf('Gimei\Name', $male);
+        $this->assertTrue($male->isMale());
+        $this->assertFalse($male->isFemale());
+
         $this->assertEquals('野村 敏彦', $male->kanji);
         $this->assertEquals('のむら としひこ', $male->hiragana);
         $this->assertEquals('ノムラ トシヒコ', $male->katakana);
@@ -36,6 +39,9 @@ class NameTest extends \PHPUnit_Framework_TestCase
         $female = new Name('female');
 
         $this->assertInstanceOf('Gimei\Name', $female);
+        $this->assertTrue($female->isFemale());
+        $this->assertFalse($female->isMale());
+
         $this->assertEquals('杏琉', $female->firstName->kanji);
         $this->assertEquals('あんる', $female->firstName->hiragana);
         $this->assertEquals('アンル', $female->firstName->katakana);
