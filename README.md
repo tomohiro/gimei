@@ -1,6 +1,8 @@
 Gimei
 ================================================================================
 
+[![Build Status](https://img.shields.io/travis/Tomohiro/gimei.svg?style=flat-square)](https://travis-ci.org/Tomohiro/gimei)
+
 PHP port of [Gimei](https://github.com/willnet/gimei).
 
 
