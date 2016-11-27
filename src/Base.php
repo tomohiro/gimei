@@ -4,8 +4,17 @@ namespace Gimei;
 
 class Base
 {
-    protected function sample(array $array)
+    public static function sample(array $array)
     {
-        return $array[array_rand($array)];
+        $size = count($array);
+        if ($size === 0) {
+            return;
+        }
+
+        $min = 0;
+        $max = $size - 1;
+        $key = mt_rand($min, $max);
+
+        return $array[$key];
     }
 }

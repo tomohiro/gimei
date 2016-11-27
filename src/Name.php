@@ -42,13 +42,13 @@ class Name extends Base
 
     protected function sampleFirstName($firstNames)
     {
-        $firstName = $this->sample($firstNames);
+        $firstName = static::sample($firstNames);
         return new FirstName($firstName[0], $firstName[1], $firstName[2]);
     }
 
     protected function sampleLastName($lastNames)
     {
-        $lastName = $this->sample($lastNames);
+        $lastName = static::sample($lastNames);
         return new LastName($lastName[0], $lastName[1], $lastName[2]);
     }
 }
