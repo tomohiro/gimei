@@ -32,19 +32,19 @@ class Address extends Base
 
     protected function samplePrefecture($prefectures)
     {
-        $prefecture = $this->sample($prefectures);
+        $prefecture = static::sample($prefectures);
         return new Prefecture($prefecture[0], $prefecture[1], $prefecture[2]);
     }
 
     protected function sampleCity($cities)
     {
-        $city = $this->sample($cities);
+        $city = static::sample($cities);
         return new City($city[0], $city[1], $city[2]);
     }
 
     protected function sampleTown($towns)
     {
-        $town = $this->sample($towns);
+        $town = static::sample($towns);
         return new Town($town[0], $town[1], $town[2]);
     }
 }
