@@ -51,9 +51,9 @@ class NameTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('ひろか', $female->firstName->hiragana);
         $this->assertEquals('ヒロカ', $female->firstName->katakana);
 
-       $this->assertInstanceOf('Gimei\Name\LastName', $female->lastName);
+        $this->assertInstanceOf('Gimei\Name\LastName', $female->lastName);
         $this->assertEquals('鈴木', $female->lastName->kanji);
         $this->assertEquals('すずき', $female->lastName->hiragana);
         $this->assertEquals('スズキ', $female->lastName->katakana);
-     }
+    }
 }

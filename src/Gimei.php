@@ -21,6 +21,6 @@ class Gimei
 
     public static function address()
     {
-        return new Address;
+        return new Address();
     }
 }

@@ -10,7 +10,7 @@ class Combination
 
     public function __construct($kanji, $hiragana, $katakana)
     {
-        $this->kanji    = $kanji;
+        $this->kanji = $kanji;
         $this->hiragana = $hiragana;
         $this->katakana = $katakana;
     }

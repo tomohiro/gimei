@@ -4,4 +4,6 @@ namespace Gimei\Address;
 
 use Gimei\Combination;
 
-class Prefecture extends Combination { }
+class Prefecture extends Combination
+{
+}

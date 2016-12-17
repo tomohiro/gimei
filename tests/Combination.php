@@ -2,9 +2,7 @@
 
 namespace Gimei;
 
-use Gimei\Combination;
-
-class CombinationTest extends \PHPUnit_Framework_TestCase
+class Combination extends \PHPUnit_Framework_TestCase
 {
     public function testCreateName()
     {
