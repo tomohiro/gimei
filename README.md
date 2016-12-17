@@ -2,6 +2,7 @@ Gimei
 ================================================================================
 
 [![Build Status](https://img.shields.io/travis/Tomohiro/gimei.svg?style=flat-square)](https://travis-ci.org/Tomohiro/gimei)
+[![StyleCI Status](https://styleci.io/repos/73813066/shield?branch=master)](https://styleci.io/repos/73813066)
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/Tomohiro/gimei.svg?style=flat-square)](https://scrutinizer-ci.com/g/Tomohiro/gimei/?branch=master)
 
 PHP port of [Gimei](https://github.com/willnet/gimei).
