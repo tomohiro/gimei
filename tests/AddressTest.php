@@ -13,7 +13,7 @@ class AddressTest extends \PHPUnit_Framework_TestCase
 
     public function testAddressReturnsAddress()
     {
-        $address = new Address;
+        $address = new Address();
 
         $this->assertInstanceOf('Gimei\Address', $address);
         $this->assertEquals('兵庫県室蘭市仁川高台', $address->kanji);
@@ -36,4 +36,3 @@ class AddressTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('ニガワタカダイ', $address->town->katakana);
     }
 }
-

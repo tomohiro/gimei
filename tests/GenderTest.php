@@ -1,4 +1,5 @@
 <?php
+
 namespace Gimei\Test;
 
 use Gimei\Gender;

@@ -17,7 +17,7 @@ class Gender
 
     public static function random()
     {
-        return new self;
+        return new self();
     }
 
     public static function male()

@@ -1,4 +1,5 @@
 <?php
+
 namespace Gimei\Test;
 
 use Gimei\Base;
@@ -12,7 +13,7 @@ class BaseTest extends \PHPUnit_Framework_TestCase
 
     public function testSampleReturnsOneRandomItemFromArray()
     {
-        $base = new Base;
+        $base = new Base();
         $list = ['foo', 'bar', 'baz'];
         $this->assertEquals('bar', Base::sample($list));
     }
